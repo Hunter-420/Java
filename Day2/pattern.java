@@ -1,26 +1,36 @@
-/* pattern print
- 1. 
+/* pattern print in java
+ ------------------------
+ pattern 1: 
  ****
  ****
  ****
  ****
-
-2. 
+-------------
+pattern 2: 
 *****
 *   *
 *   *
 *****
-
-3.
+------------
+pattern 3:
 *
 * *
 * * *
 * * * *
-
+------------
+pattern 4:
+****
+***
+**
+*
+------------
+    
+}
 */ 
 
 public class pattern {
     public static void main(String[] args) {
+        //pattern 1 code
         System.out.println("pattern 1:");
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
@@ -28,6 +38,7 @@ public class pattern {
             }
             System.out.println("");
         }
+   //pattern 2 code
     System.out.println("\npattern 2:");
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 5; j++) {
@@ -40,12 +51,23 @@ public class pattern {
             System.out.println();
     }
 
+    //pattern 3 code
     System.out.println("\nPattern 3:");
         for (int i = 1; i < 5; i++) {
             for (int j = 0; j < i; j++) {
                 System.out.print("*");
             }
             System.out.println();
+        }
+
+        //pattern 4 code
+        System.out.println("\npattern 4:");
+        for (int i = 4; i > 0; --i) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            
         }
 
     }
