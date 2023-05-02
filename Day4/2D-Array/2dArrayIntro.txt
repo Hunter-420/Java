@@ -1,0 +1,6 @@
+2D array is like a matrix which have row and columns
+
+Declaration :
+type[][] arrayName = new type[rows][columns];
+Ex:
+int[][] numbers = new int[3][5];
