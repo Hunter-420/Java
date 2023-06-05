@@ -3,6 +3,7 @@ package Interface;
 interface BEIT{
     public void useLaptop();
     public void knowGit();
+    abstract public void ai(int a);
 };
 interface extraBEIT extends BEIT{
     public void stackoverflow();
@@ -27,6 +28,12 @@ class Implement implements extraBEIT{
     public void stackoverflow() {
         System.out.println("Account on stack overflow");
     }
+
+    @Override
+    public void ai(int a){
+        System.out.println("know AI "+a+"%");
+    }
+
 };
 
 class Use{
@@ -35,7 +42,10 @@ class Use{
         imple.knowGit();
         imple.stackoverflow();
         imple.useLaptop();
+        imple.ai(99);
         extraBEIT.java();
+
+
 
     }
 };
