@@ -1,0 +1,27 @@
+
+Create frame process:
+
+1. setVisible(true)
+2. setSize(int, int)
+
+3. add(Component)
+
+Optional
+----------
+4. setResizable(true)
+
+
+AWT Canvas
+----------
+-> used when user wants to draw something on the screen
+-> it is a blank component
+-> it is a heavy weight component
+-> it is a container to draw graphics
+-> it is a rectangular area where we can draw graphics
+-> it is a blank area where we can draw graphics
+
+
+AWT canvas Example
+------------------
+import java.awt.*;
+import java.awt.event.*;

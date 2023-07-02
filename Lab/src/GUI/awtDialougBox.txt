@@ -1,0 +1,129 @@
+Java awt Dialog
+----------------
+-> Dialog is a top level window with a title and a border that is typically used to take some form of input from the user.
+-> The dialog window can be closed either by clicking on the OK button or by clicking on the close icon of the title bar.
+-> It does not contain the maximize/minimize buttons.
+-> It inherits the Window class.
+-> The Dialog class is a subclass of Window.
+
+Awt Dialog Example
+------------------
+import java.awt.*;
+import java.awt.event.*;
+class DialogExample
+{
+    private static Dialog d;
+    DialogExample()
+    {
+        Frame f= new Frame();
+        d = new Dialog(f , "Dialog Example", true);
+        d.setLayout( new FlowLayout() );
+        Button b = new Button ("OK");
+        b.addActionListener ( new ActionListener()
+        {
+            public void actionPerformed( ActionEvent e )
+            {
+                DialogExample.d.setVisible(false);
+            }
+        });
+        d.add( new Label ("Click button to continue."));
+        d.add(b);
+        d.setSize(300,300);
+        d.setVisible(true);
+    }
+    public static void main(String args[])
+    {
+        new DialogExample();
+    }
+}
+
+
+Sir ko example
+
+public class Dialog extends Window{
+   public static Dialog d;
+   Dialog(){
+        Frame f = new Frame();
+        d = new Dialog(f,"Dialog Example",true);
+        d.setLayout(new FlowLayout());
+        Button b = new Button("OK");
+        b.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                Dialog.d.setVisible(false);
+            }
+        });
+        d.add(new Label("Click button to continue"));
+        d.add(b);
+        d.setSize(300,300);
+        d.setVisible(true);
+
+   }
+    public static void main(String[] args){
+         new Dialog();
+    }
+}
+
+
+Java Action Listner
+-------------------
+-> The ActionListener interface is found in java.awt.event package.
+-> It is implemented by those classes whose objects are required to handle the action events.
+-> It contains only one method actionPerformed().
+-> The actionPerformed() method is invoked automatically called whenever you click on the registered component.
+-> The java.awt.event package provides many event classes and Listener interfaces for event handling.
+-> Only those classes which implement the ActionListener interface can register themselves as listeners upon components.
+-> The ActionListener interface is defined as follows:
+public interface ActionListener extends EventListener
+{
+    public void actionPerformed(ActionEvent e);
+}
+
+Java Action Listner Example
+----------------------------
+import java.awt.*;
+import java.awt.event.*;
+public class ActionListnerExample implements ActionListner
+{
+    //Register the component with Listner
+     component.addActionListener(inatanceOfActionListnerClass);
+    //override the actionPerformed() method
+        public void actionPerformed(ActionEvent e)
+        {
+            //perform action
+        }
+}
+
+
+Java Event Listner -- Not in syllabus
+------------------
+-> The EventListener interface is found in java.util package.
+-> It is implemented by those classes whose objects are required to handle the events.
+-> It contains only one method actionPerformed().
+-> The actionPerformed() method is invoked automatically called whenever you click on the registered component.
+-> The java.util package provides many event classes and Listener interfaces for event handling.
+-> Only those classes which implement the EventListener interface can register themselves as listeners upon components.
+-> The EventListener interface is defined as follows:
+public interface EventListener
+{
+    //empty interface
+}
+
+
+Java Mouse Listner
+------------------
+-> The MouseListener interface is found in java.awt.event package.
+-> It is implemented by those classes whose objects are required to handle the mouse events.
+-> It contains five methods mouseClicked(), mouseEntered(), mouseExited(), mousePressed() and mouseReleased().
+-> The mouseClicked() method is invoked automatically called whenever you click on the registered component.
+-> The java.awt.event package provides many event classes and Listener interfaces for event handling.
+-> Only those classes which implement the MouseListener interface can register themselves as listeners upon components.
+-> The MouseListener interface is defined as follows:
+public interface MouseListener extends EventListener
+{
+    public void mouseClicked(MouseEvent e);
+    public void mouseEntered(MouseEvent e);
+    public void mouseExited(MouseEvent e);
+    public void mousePressed(MouseEvent e);
+    public void mouseReleased(MouseEvent e);
+}
+
